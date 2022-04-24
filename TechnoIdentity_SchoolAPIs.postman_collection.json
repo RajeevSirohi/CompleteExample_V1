@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "0a94cd23-316e-4b98-8703-27c219d57be8",
+		"name": "TechnoIdentity_SchoolAPIs",
+		"description": "This set of APIs allow for the following actions :",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all the students' grades the instructor has given out",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}GetGradesByInstructor/3",
+					"host": [
+						"{{baseUrl}}GetGradesByInstructor"
+					],
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all the students with top 3 records for each course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}GetTopStudentsByCourse/18?filter=1",
+					"host": [
+						"{{baseUrl}}GetTopStudentsByCourse"
+					],
+					"path": [
+						"18"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll a new student in a course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"StudentId\" : 47,\r\n    \"CourseId\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}EnrollStudent",
+					"host": [
+						"{{baseUrl}}EnrollStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Grade for a student in a course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"StudentId\" : 25,\r\n    \"CourseId\" : 19,\r\n    \"Grade\":99,\r\n    \"EnrollmentId\":33\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}UpdateGrade",
+					"host": [
+						"{{baseUrl}}UpdateGrade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
