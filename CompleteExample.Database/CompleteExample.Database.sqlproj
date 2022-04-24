@@ -61,4 +61,7 @@
   <ItemGroup>
     <PostDeploy Include="BuildDatabaseWithSampleData.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="ExpandDatabaseToPreserveHistoricalGrades.sql" />
+  </ItemGroup>
 </Project>
